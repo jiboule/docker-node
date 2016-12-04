@@ -16,11 +16,11 @@ RUN chown -R node:node /usr/local/lib/node_modules
 RUN chown -R node:node /usr/local/bin
 RUN chown -R node:node /usr/local/lib
 
+RUN npm completion >> ~/.bashrc
+
 USER node
 ENV HOME /var/www
 
 WORKDIR /var/www
-
-RUN npm completion >> ~/.bashrc
 
 EXPOSE 8070 9966
